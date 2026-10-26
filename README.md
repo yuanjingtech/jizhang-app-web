@@ -16,6 +16,16 @@ jizhang-app-web/
     └── check.sh        # 上线前自检
 ```
 
+## 线上地址
+
+**https://yuanjingtech.github.io/jizhang-app-web/**
+
+- 仓库：https://github.com/yuanjingtech/jizhang-app-web（public，组织 free 套餐只有 public 仓能开 Pages）
+- 托管：GitHub Pages，`main` 分支根目录，`build_type=legacy`（纯静态，无需 Actions）
+- 发布方式：`git push origin main` 即自动重新构建，通常 1 分钟内生效
+
+这个地址是公众号推文「阅读原文」的目标。**改域名或换托管时必须同步通知公众号运营**，否则已发出的文章会指向死链。
+
 ## 本地预览
 
 ```bash
