@@ -363,6 +363,12 @@ code {
   color: var(--text-secondary);
 }
 
+/* 呼应公众号标题「记的不是流水，是资产负债表」——从文章点过来的人能接上 */
+.lead-em {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -1242,24 +1248,16 @@ code {
   backdrop-filter: blur(12px);
 }
 
-.qr-placeholder {
-  display: grid;
-  place-items: center;
-  width: 152px;
-  height: 152px;
+/* 小程序码：白底交给图片自己（码本体四周就是白），外面只补圆角与一圈细边 */
+.qr-img {
+  display: block;
+  width: 168px;
+  height: 168px;
   margin: 0 auto 14px;
   border-radius: var(--radius-control);
   background: #fff;
-  border: 1px dashed rgba(43, 58, 85, 0.24);
-}
-
-.qr-placeholder svg {
-  width: 104px;
-  height: 104px;
-  fill: none;
-  stroke: var(--text-tertiary);
-  stroke-width: 2;
-  opacity: 0.55;
+  border: 1px solid rgba(43, 58, 85, 0.1);
+  object-fit: contain;
 }
 
 .qr-title {

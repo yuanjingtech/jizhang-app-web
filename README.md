@@ -11,7 +11,7 @@ jizhang-app-web/
 │   ├── styles.css      # 设计 token + 全部样式
 │   ├── app.js          # 移动端菜单、页脚年份、滚动入场（渐进增强）
 │   ├── favicon.svg
-│   └── qr-code.png     # 【待补】体验版小程序码，见下文
+│   └── qr-code.jpg     # 长期有效的小程序码，见下文
 └── scripts/
     └── check.sh        # 上线前自检
 ```
@@ -34,28 +34,15 @@ python3 -m http.server 8765
 # 打开 http://127.0.0.1:8765/
 ```
 
-## 上线前必做：补二维码
+## 小程序码
 
-`index.html` 的「开始使用」区块现在是一个**二维码占位**，不是能扫的码。
-`jizhang/docs/` 里那张「远景记账体验版」二维码标注 **3 月 5 日前有效**，已经过期，所以没有放进页面。
+页面底部「微信扫一扫」用的是**长期有效**的小程序码，2026-10-26 由 Human 提供，已接入。
 
-补法：把新的小程序码保存为 `assets/qr-code.png`，然后把占位块换成一个 `img`：
+- 页面引用：`assets/qr-code.jpg`（258×258）
+- 共用原图：`jizhang/assets/brand/jizhang-miniprogram-qr.jpg` —— **其他位置（公众号、海报、README 等）要用码，一律从这里取**，别各自存一份，换码时只换这一个源再同步。
+- 源图是纯白底的方图，页面只加了圆角和一圈 1px 细边，没有做裁切处理。
 
-```html
-<div class="qr-card">
-  <img class="qr-img" src="assets/qr-code.png" alt="远景记账体验版小程序码" width="152" height="152">
-  <p class="qr-title">微信扫一扫</p>
-  <p class="qr-note">体验版 · 无需安装</p>
-</div>
-```
-
-同时补 `assets/styles.css` 里的 `.qr-img`：
-
-```css
-.qr-img { display: block; margin: 0 auto 14px; width: 152px; height: 152px; border-radius: var(--radius-control); }
-```
-
-> 公众号文章发出去之后，二维码就固化在读者手里了——过期前务必换成长期有效的码。
+> 之前那张 `docs/远景记账体验版（3月5日前有效）.png` 已过期，不要再用。若以后换了码：替换 `jizhang/assets/brand/` 里那张源图 → 同步到本目录 `assets/qr-code.jpg` → 跑 `./scripts/check.sh` → push。
 
 ## 文案与功能来源
 

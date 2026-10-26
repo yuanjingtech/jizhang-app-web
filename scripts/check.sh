@@ -41,16 +41,24 @@ else
   ok '未引用过期二维码'
 fi
 
-echo "── 6. 二维码状态 ──"
-if [ -f assets/qr-code.png ]; then
-  ok 'assets/qr-code.png 已存在'
+echo "── 6. 二维码 ──"
+QR=$(grep -oE 'src="assets/qr-code\.[a-z]+"' index.html | sed -E 's/src="//; s/"$//' | head -1)
+if [ -n "$QR" ] && [ -f "$QR" ]; then
+  ok "页面使用了二维码图片：$QR"
   if grep -q 'qr-placeholder' index.html; then
-    info '二维码图片已就位，但 index.html 仍是占位块 —— 按 README「上线前必做」换成 <img>'
+    bad '仍残留占位块 qr-placeholder'
   else
-    ok 'index.html 已使用二维码图片'
+    ok '占位块已移除'
   fi
+  if grep -qE 'alt="[^"]*"' index.html; then
+    ok '二维码图片带 alt 文本'
+  else
+    bad '二维码图片缺少 alt'
+  fi
+elif grep -q 'qr-placeholder' index.html; then
+  info '仍是占位块（未接入真实小程序码）'
 else
-  info 'assets/qr-code.png 尚未提供（占位块照常显示）—— 上线前必须补，见 README'
+  bad '既没有占位块也没有二维码图片'
 fi
 
 echo "── 7. 文案红线 ──"
