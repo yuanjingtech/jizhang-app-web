@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>远景记账 · 让钱为你工作</title>
+<meta name="description" content="远景记账是一款基于《穷爸爸富爸爸》理念的个人财务管理应用：收支记一笔、应收应付一图看清、未来财富预测、自然语言智能记账。">
+<meta name="theme-color" content="#e7efff">
+<meta property="og:title" content="远景记账 · 让钱为你工作">
+<meta property="og:description" content="基于《穷爸爸富爸爸》理念的个人财务管理应用：收支记一笔、应收应付一图看清、未来财富预测。">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="远景记账 首页">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 17l5-6 4 3 5-7 4 4"/>
+          <path d="M3 21h18"/>
+        </svg>
+      </span>
+      <span class="brand-name">远景记账</span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="主导航">
+      <a href="#features">功能</a>
+      <a href="#screens">界面</a>
+      <a href="#forecast">预测</a>
+      <a href="#faq">常见问题</a>
+      <a class="nav-cta" href="#download">开始使用</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="展开菜单">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= Hero ================= -->
+  <section class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">《穷爸爸富爸爸》理念 · 个人财务管理</p>
+        <h1>穷人为钱工作，<br><em>富人让钱为他们工作。</em></h1>
+        <p class="lead">
+          远景记账把你的每一笔收支、每一笔应收应付，都放到同一条时间线上。
+          不只记下发生过什么 —— 它还会告诉你，照现在的趋势走下去，你的钱会变成多少。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#download">开始使用</a>
+          <a class="btn btn-ghost" href="#features">看看功能</a>
+        </div>
+        <ul class="hero-facts">
+          <li>收支 3 秒记一笔</li>
+          <li>应收应付一图看清</li>
+          <li>未来趋势预测</li>
+        </ul>
+      </div>
+
+      <!-- 手机样机：按 App 真实的液态玻璃材质与配色绘制 -->
+      <div class="hero-device" aria-hidden="true">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="wallpaper"></div>
+            <div class="status-bar"><span>9:41</span><span class="status-icons">●●● ▮</span></div>
+            <div class="app-nav"><span class="app-title">远景记账</span><span class="app-capsule"></span></div>
+
+            <div class="range-pill">
+              <span class="range-item is-on">日</span>
+              <span class="range-item">周</span>
+              <span class="range-item">月</span>
+              <span class="range-item">季</span>
+              <span class="range-item">年</span>
+            </div>
+
+            <div class="glass-card">
+              <p class="card-title">应收应付（元）</p>
+              <svg class="mini-chart" viewBox="0 0 240 96" preserveAspectRatio="none" role="img" aria-label="应收应付走势示意">
+                <g class="grid">
+                  <line x1="0" y1="16" x2="240" y2="16"/>
+                  <line x1="0" y1="40" x2="240" y2="40"/>
+                  <line x1="0" y1="64" x2="240" y2="64"/>
+                  <line x1="0" y1="88" x2="240" y2="88"/>
+                </g>
+                <polyline class="line line-receivable" points="0,88 34,88 68,84 102,80 136,76 170,72 204,68 240,64"/>
+                <polyline class="line line-payable" points="0,88 34,88 68,88 102,88 136,88 170,24 204,52 240,88"/>
+                <circle class="dot dot-payable" cx="170" cy="24" r="2.5"/>
+              </svg>
+              <div class="axis-labels"><span>10-10</span><span>10-13</span><span>10-16</span><span>10-20</span></div>
+              <div class="legend">
+                <span class="legend-item"><i class="swatch swatch-green"></i>应收</span>
+                <span class="legend-item"><i class="swatch swatch-red"></i>应付</span>
+              </div>
+            </div>
+
+            <div class="glass-card">
+              <p class="card-title">收入支出（元）</p>
+              <svg class="mini-chart" viewBox="0 0 240 96" preserveAspectRatio="none" role="img" aria-label="收入支出走势示意">
+                <g class="grid">
+                  <line x1="0" y1="16" x2="240" y2="16"/>
+                  <line x1="0" y1="40" x2="240" y2="40"/>
+                  <line x1="0" y1="64" x2="240" y2="64"/>
+                  <line x1="0" y1="88" x2="240" y2="88"/>
+                </g>
+                <polyline class="line line-income" points="0,88 34,88 68,88 102,88 136,30 170,74 204,88 240,88"/>
+                <polyline class="line line-expense" points="0,88 34,88 68,84 102,80 136,72 170,66 204,88 240,88"/>
+              </svg>
+              <div class="axis-labels"><span>10-10</span><span>10-13</span><span>10-16</span><span>10-20</span></div>
+              <div class="legend">
+                <span class="legend-item"><i class="swatch swatch-green"></i>收入</span>
+                <span class="legend-item"><i class="swatch swatch-red"></i>支出</span>
+              </div>
+            </div>
+
+            <div class="glass-card record-card">
+              <div class="record-line">
+                <span class="record-comment">今年电</span>
+                <span class="record-amount">-86.40</span>
+              </div>
+              <span class="record-meta">2026-10-20 · 支出</span>
+            </div>
+
+            <div class="tab-bar">
+              <span class="tab is-on"><i class="tab-ico"></i>首页</span>
+              <span class="tab"><i class="tab-ico"></i>收入</span>
+              <span class="tab"><i class="tab-ico"></i>支出</span>
+              <span class="tab"><i class="tab-ico"></i>资产</span>
+              <span class="tab"><i class="tab-ico"></i>负债</span>
+            </div>
+            <div class="fab">+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 核心能力 ================= -->
+  <section class="section" id="features">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">核心功能</p>
+        <h2>记账只是起点，看清趋势才是目的</h2>
+        <p class="section-sub">
+          五个标签页覆盖收支、资产、负债与账户往来。所有图表共用一套时间范围切换，
+          切到「周 / 月 / 季 / 年」时，纵坐标刻度与网格会跟着重算。
+        </p>
+      </header>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+          <h3>三秒记一笔</h3>
+          <p>日期、金额、备注，收入与支出分色显示。金额只在显示时取两位小数，入库仍保留原始精度，明细之和与总额始终对得上。</p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </span>
+          <h3>说一句就记完</h3>
+          <p>在底部输入框打「出行10元」，智能记账自动识别出金额、类型与备注，确认即可入账。连续记账时输入框会自动清空。</p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-6 4 3 5-7 4 4"/><path d="M3 21h18"/></svg>
+          </span>
+          <h3>应收应付一图看清</h3>
+          <p>别人欠你的、你欠别人的，两条曲线画在同一张图上。应收绿色、应付红色，谁在涨一眼就能看出来。</p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+          </span>
+          <h3>收入支出同框对比</h3>
+          <p>不用来回切页面。收入和支出叠在一张折线图上，空白的日期分组整组跳过，不留下没有内容的日期标题。</p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>
+          </span>
+          <h3>资产与负债按期数管理</h3>
+          <p>一笔资产按「年 / 月 / 周 / 日」分期，记清总期数与每期金额。资产与负债各有独立列表，点进去就能改。</p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </span>
+          <h3>时间范围随意切</h3>
+          <p>日、周、月、季、年五档一键切换，两张图表同时刷新。选择器只改属性值，切换时不会留下残影色块。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 预测（重点功能） ================= -->
+  <section class="section section-tint" id="forecast">
+    <div class="wrap forecast-grid">
+      <div class="forecast-copy">
+        <p class="eyebrow">未来财富预测</p>
+        <h2>照现在的走法，钱会变成多少？</h2>
+        <p>
+          历史曲线之外，远景记账会顺着已有数据做线性拟合，把接下来 1～3 个周期的走势画在真实数据之后 ——
+          并给出一个置信区间，而不是一条看起来很确定的线。
+        </p>
+        <ul class="check-list">
+          <li><strong>按时间粒度决定预测长度</strong>：日视图外推 3 天、周与月 2 个周期，季与年各 1 个，粒度越粗越不外推。</li>
+          <li><strong>点数不够就不画</strong>：少于 4 个数据点直接放弃预测，宁可空白，也不给一条没有依据的线。</li>
+          <li><strong>防住天文数字</strong>：预测值超出历史量级时自动不显示，避免拿一个尖峰外推出离谱结论。</li>
+          <li><strong>趋势可信度单独标注</strong>：R² 达标且斜率非零时，才标记为「趋势可信」。</li>
+        </ul>
+      </div>
+
+      <figure class="forecast-figure">
+        <div class="glass-panel">
+          <p class="card-title">应收应付 · 含未来预测</p>
+          <svg viewBox="0 0 320 150" class="forecast-chart" role="img" aria-label="历史数据与未来预测示意：实线为历史，虚线为预测，阴影带为置信区间">
+            <g class="grid">
+              <line x1="0" y1="20" x2="320" y2="20"/>
+              <line x1="0" y1="55" x2="320" y2="55"/>
+              <line x1="0" y1="90" x2="320" y2="90"/>
+              <line x1="0" y1="125" x2="320" y2="125"/>
+            </g>
+            <rect class="forecast-zone" x="220" y="0" width="100" height="150"/>
+            <path class="band" d="M220 84 L250 70 L280 58 L310 46 L310 78 L280 88 L250 98 L220 108 Z"/>
+            <polyline class="line line-receivable" points="0,110 36,104 73,112 110,96 146,100 183,88 220,84"/>
+            <polyline class="line line-receivable dashed" points="220,84 250,80 280,72 310,66"/>
+            <polyline class="line line-payable" points="0,96 36,100 73,88 110,92 146,80 183,76 220,70"/>
+            <polyline class="line line-payable dashed" points="220,70 250,64 280,56 310,50"/>
+            <line class="now-line" x1="220" y1="0" x2="220" y2="150"/>
+            <text class="chart-label" x="224" y="14">预测</text>
+          </svg>
+          <div class="legend">
+            <span class="legend-item"><i class="swatch swatch-green"></i>应收</span>
+            <span class="legend-item"><i class="swatch swatch-red"></i>应付</span>
+            <span class="legend-item"><i class="swatch swatch-dash"></i>虚线为预测</span>
+          </div>
+          <figcaption>示意图：实线是已经记下的数据，虚线是按趋势外推的预测，浅色带是置信区间。</figcaption>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= 界面 ================= -->
+  <section class="section" id="screens">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">界面</p>
+        <h2>苹果液态玻璃，一层一层叠出来的</h2>
+        <p class="section-sub">
+          不是「半透明白底」四个字。整页先铺一层渐变壁纸，玻璃面才有东西可透；
+          浮在滚动内容之上的控件再叠真实背景模糊；最后是 1px 高光边与顶部光泽 —— 缺一层，就会退化成普通灰色卡片。
+        </p>
+      </header>
+
+      <div class="screen-row">
+        <figure class="screen-figure">
+          <div class="phone phone-small">
+            <div class="phone-screen">
+              <div class="wallpaper"></div>
+              <div class="app-nav"><span class="app-title">智能记账</span></div>
+              <div class="smart-form">
+                <div class="segmented"><span class="seg is-on">支出</span><span class="seg">收入</span></div>
+                <div class="form-field"><label>日期</label><span>2026-10-26</span></div>
+                <div class="form-field"><label>金额</label><span class="amount-warn">10.00</span></div>
+                <div class="form-field"><label>备注</label><span>出行</span></div>
+              </div>
+              <div class="smart-input">
+                <span class="smart-input-text">输入文字记账。例如 出行10元</span>
+                <span class="smart-confirm">确认</span>
+              </div>
+            </div>
+          </div>
+          <figcaption>说一句「出行10元」，草稿自动填好</figcaption>
+        </figure>
+
+        <figure class="screen-figure">
+          <div class="phone phone-small">
+            <div class="phone-screen">
+              <div class="wallpaper"></div>
+              <div class="app-nav"><span class="app-title">资产</span></div>
+              <div class="list-rows">
+                <div class="list-row"><span class="row-meta">2026-10-20 · 12 期</span><span class="row-amount green">+1,000</span><span class="row-comment">今年电</span></div>
+                <div class="list-row"><span class="row-meta">2026-09-18 · 6 期</span><span class="row-amount green">+2,400</span><span class="row-comment">房租押金</span></div>
+                <div class="list-row"><span class="row-meta">2026-08-02 · 24 期</span><span class="row-amount green">+860</span><span class="row-comment">设备分期</span></div>
+                <div class="list-row"><span class="row-meta">2026-07-11 · 3 期</span><span class="row-amount green">+150</span><span class="row-comment">订阅</span></div>
+              </div>
+              <div class="tab-bar tab-bar-small">
+                <span class="tab">首页</span><span class="tab">收入</span><span class="tab">支出</span><span class="tab is-on">资产</span><span class="tab">负债</span>
+              </div>
+            </div>
+          </div>
+          <figcaption>资产与负债各有独立列表，按期数记录</figcaption>
+        </figure>
+
+        <figure class="screen-figure">
+          <div class="phone phone-small">
+            <div class="phone-screen">
+              <div class="wallpaper"></div>
+              <div class="app-nav"><span class="app-title">首页</span></div>
+              <div class="range-pill range-pill-small">
+                <span class="range-item">日</span><span class="range-item is-on">周</span><span class="range-item">月</span><span class="range-item">季</span><span class="range-item">年</span>
+              </div>
+              <div class="glass-card glass-card-small">
+                <p class="card-title">收入支出（元）</p>
+                <svg class="mini-chart mini-chart-small" viewBox="0 0 200 70" preserveAspectRatio="none" aria-hidden="true">
+                  <g class="grid"><line x1="0" y1="12" x2="200" y2="12"/><line x1="0" y1="34" x2="200" y2="34"/><line x1="0" y1="56" x2="200" y2="56"/></g>
+                  <polyline class="line line-income" points="0,64 40,48 80,54 120,30 160,44 200,36"/>
+                  <polyline class="line line-expense" points="0,60 40,62 80,52 120,58 160,50 200,54"/>
+                </svg>
+                <div class="axis-labels"><span>8-16</span><span>8-30</span><span>9-13</span><span>9-27</span><span>10-11</span></div>
+              </div>
+              <div class="phone-spacer"></div>
+              <div class="glass-card glass-card-small">
+                <p class="card-title">应收应付（元）</p>
+                <svg class="mini-chart mini-chart-small" viewBox="0 0 200 70" preserveAspectRatio="none" aria-hidden="true">
+                  <g class="grid"><line x1="0" y1="12" x2="200" y2="12"/><line x1="0" y1="34" x2="200" y2="34"/><line x1="0" y1="56" x2="200" y2="56"/></g>
+                  <polyline class="line line-receivable" points="0,58 40,54 80,48 120,44 160,40 200,34"/>
+                  <polyline class="line line-payable" points="0,62 40,58 80,60 120,50 160,54 200,48"/>
+                </svg>
+                <div class="legend">
+                  <span class="legend-item"><i class="swatch swatch-green"></i>应收</span>
+                  <span class="legend-item"><i class="swatch swatch-red"></i>应付</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <figcaption>切到「周」，横轴与刻度一起重算</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 设计理念 ================= -->
+  <section class="section section-tint" id="design">
+    <div class="wrap design-grid">
+      <div>
+        <p class="eyebrow">设计</p>
+        <h2>为读清楚数字而做的取舍</h2>
+        <p>
+          记账应用的界面，最重要的是数字读得准、看得清。所以这里的每一处材质与颜色，都是为了让数字站在最前面。
+        </p>
+      </div>
+      <ul class="design-list">
+        <li>
+          <h3>深色玻璃的标签栏</h3>
+          <p>底部标签栏用深色玻璃而不是浅色：未选中的灰字与选中的黄色图标压在浅色玻璃上会看不清。深色玻璃的不透明度也单独高一档。</p>
+        </li>
+        <li>
+          <h3>只在浮层开背景模糊</h3>
+          <p>悬浮按钮和底部输入条身后会有内容滚过去，所以给它们真实模糊；静态卡片身后只有平滑壁纸，糊了看不出来，白付合成开销。</p>
+        </li>
+        <li>
+          <h3>切换只改属性值</h3>
+          <p>时间范围选择器的选中态与未选中态都显式声明背景，不让背景声明消失 —— 否则每切一次就留下一个残影色块。</p>
+        </li>
+        <li>
+          <h3>金额精度分两层</h3>
+          <p>显示层三位及以上小数才四舍五入到两位，整数与一两位小数原样呈现；提交给服务端的数据保持原始精度。</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= 常见问题 ================= -->
+  <section class="section" id="faq">
+    <div class="wrap wrap-narrow">
+      <header class="section-head">
+        <p class="eyebrow">常见问题</p>
+        <h2>你可能想知道的</h2>
+      </header>
+
+      <div class="faq">
+        <details>
+          <summary>数据记在哪里？</summary>
+          <p>记账数据保存在服务端，按你的账号归集。换设备登录后，历史明细与图表都能拉回来。</p>
+        </details>
+        <details>
+          <summary>为什么有些时间范围加载慢？</summary>
+          <p>图表按所选区间逐日取数，区间越长数据量越大。客户端有 20 秒兜底超时，超时会明确提示，而不是一直停在「加载中」。</p>
+        </details>
+        <details>
+          <summary>预测准吗？</summary>
+          <p>预测是线性外推，用来看趋势，不是投资建议。点数不足、趋势不可信或预测值超出合理量级时，它就不会画出来 —— 空白比错误的线更有用。</p>
+        </details>
+        <details>
+          <summary>支持哪些平台？</summary>
+          <p>当前以微信小程序形态提供体验版，Android、iOS 与鸿蒙为同一套代码的多端构建。</p>
+        </details>
+        <details>
+          <summary>能改已记的账吗？</summary>
+          <p>可以。收入、支出、资产、负债的每一行点进去都能编辑，账户明细页也能看到每一笔的来龙去脉。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 下载 ================= -->
+  <section class="section section-cta" id="download">
+    <div class="wrap cta-grid">
+      <div class="cta-copy">
+        <h2>从记下第一笔开始</h2>
+        <p>
+          打开小程序，记一笔今天的支出。几周之后，你会看到一张属于自己的曲线 ——
+          以及它指向的未来。
+        </p>
+        <a class="btn btn-primary btn-lg" href="#top">体验远景记账</a>
+        <p class="cta-note">体验版以微信小程序形式提供，无需安装。</p>
+      </div>
+
+      <div class="qr-card">
+        <div class="qr-placeholder" role="img" aria-label="体验版二维码占位，待替换为最新小程序码">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <rect x="10" y="10" width="34" height="34" rx="4"/>
+            <rect x="18" y="18" width="18" height="18" rx="2"/>
+            <rect x="76" y="10" width="34" height="34" rx="4"/>
+            <rect x="84" y="18" width="18" height="18" rx="2"/>
+            <rect x="10" y="76" width="34" height="34" rx="4"/>
+            <rect x="18" y="84" width="18" height="18" rx="2"/>
+            <rect x="56" y="56" width="12" height="12" rx="2"/>
+            <rect x="76" y="76" width="12" height="12" rx="2"/>
+            <rect x="96" y="76" width="12" height="12" rx="2"/>
+            <rect x="76" y="96" width="12" height="12" rx="2"/>
+            <rect x="96" y="96" width="12" height="12" rx="2"/>
+            <rect x="56" y="76" width="12" height="12" rx="2"/>
+          </svg>
+        </div>
+        <p class="qr-title">微信扫一扫</p>
+        <p class="qr-note">二维码待更新 · 替换 <code>assets/qr-code.png</code> 即可</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 17l5-6 4 3 5-7 4 4"/><path d="M3 21h18"/>
+        </svg>
+      </span>
+      <span>远景记账</span>
+    </div>
+    <p class="footer-quote">「穷人为钱工作，富人让钱为他们工作。」——《穷爸爸富爸爸》</p>
+    <p class="footer-copy">© <span id="year">2026</span> 远景科技</p>
+  </div>
+</footer>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>
